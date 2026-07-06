@@ -18,6 +18,7 @@ public class Clear : MonoBehaviour
             position = player.transform.position;
             player.GetComponent<Inputcontoller>().enabled = false;
             player.GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
+            player.GetComponent<Animator>().SetBool("OnMove", false);
             flag.SetBool("Clear", true);
             StartCoroutine(Wait());
         }

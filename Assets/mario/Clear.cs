@@ -16,6 +16,7 @@ public class Clear : MonoBehaviour
         {
             vcam.Follow = null;
             position = player.transform.position;
+            player.GetComponent<Inputcontoller>().enabled = false;
             player.GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
             flag.SetBool("Clear", true);
             StartCoroutine(Wait());

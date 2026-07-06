@@ -34,7 +34,6 @@ public class Gameover : MonoBehaviour
             rb.AddForce(Vector2.up * 4f, ForceMode2D.Impulse);
             boxCollider2D.enabled = false;
             inputcontoller.enabled = false;
-            Debug.Log("Game Over");
             vcam.Follow = null;
             animator.enabled = false;
 
